@@ -1,1 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background: #f3f7fc;
+  color: #213852;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-actions {
+  max-width: 980px;
+  margin: 32px auto 18px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.app-panel {
+  max-width: 980px;
+  margin: 0 auto 48px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #dce7f3;
+  border-radius: 16px;
+  box-shadow: 0 7px 24px rgba(31, 65, 100, 0.08);
+}
+
+.app-panel h1 {
+  color: #24518a;
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  color: #60758d;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.app-panel form {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.app-panel label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  border-radius: 8px;
+  border-color: #cbd9e8;
+}
+
+.form-control:focus {
+  border-color: #5488c6;
+  box-shadow: 0 0 0 0.2rem rgba(84, 136, 198, 0.13);
+}
+
+.btn {
+  border-radius: 9px;
+  padding: 9px 19px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #2d609a;
+  border-color: #2d609a;
+}
+
+.btn-success {
+  background-color: #267b72;
+  border-color: #267b72;
+}
+
+.app-panel form .btn-success {
+  display: block;
+  margin: 24px auto 0;
+}
+
+.table {
+  background: #ffffff;
+  border-color: #dce7f3;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background: #e9f1fb;
+  color: #24518a;
+  white-space: nowrap;
+}
+
+.alert {
+  border-radius: 9px;
+}
+
+@media (max-width: 650px) {
+  .app-panel {
+    padding: 20px 16px;
+  }
+
+  .app-panel h1 {
+    font-size: 1.4rem;
+  }
+}

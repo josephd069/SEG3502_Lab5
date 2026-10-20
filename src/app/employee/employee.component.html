@@ -1,55 +1,93 @@
-<a class="btn btn-primary" [routerLink]="['/employees']">Employee List</a>
-<div class="container">
-  <h1>Employee Entry Form</h1>
+
+<div class="page-actions">
+  <a class="btn btn-primary" [routerLink]="['/employees']">
+    Liste des employés
+  </a>
+</div>
+
+<div class="container app-panel">
+  <h1>Formulaire d’enregistrement d’un employé</h1>
+
+  <p class="page-subtitle">
+    Remplissez les champs ci-dessous pour enregistrer
+    un employé dans Firestore.
+  </p>
+
   <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+
     <div class="mb-3">
-      <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" formControlName="name" required>
+      <label for="name">Nom :</label>
+      <input type="text" class="form-control"
+             id="name" formControlName="name" required>
+
       <div [hidden]="name.pristine || name.valid"
            class="alert alert-danger">
-        Employee Name is required.
+        Le nom de l’employé est obligatoire.
       </div>
     </div>
+
     <div class="mb-3">
-      <label for="dob">Date of Birth:</label>
-      <input type="date" class="form-control" id="dob" formControlName="dateOfBirth" required >
+      <label for="dob">Date de naissance :</label>
+      <input type="date" class="form-control"
+             id="dob" formControlName="dateOfBirth" required>
+
       <div [hidden]="dateOfBirth.pristine || dateOfBirth.valid"
            class="alert alert-danger">
-        Date of birth is required.
+        La date de naissance est obligatoire.
       </div>
     </div>
+
     <div class="mb-3">
-      <label for="city">City:</label>
-      <input type="text" class="form-control" id="city" required formControlName="city">
+      <label for="city">Ville :</label>
+      <input type="text" class="form-control"
+             id="city" required formControlName="city">
+
       <div [hidden]="city.pristine || city.valid"
            class="alert alert-danger">
-        City of employment is required.
+        La ville de travail est obligatoire.
       </div>
     </div>
+
     <div class="mb-3">
-      <label for="salary">Salary:</label>
-      <input type="number" class="form-control" id="salary" required step="0.01" formControlName="salary">
+      <label for="salary">Salaire :</label>
+      <input type="number" class="form-control"
+             id="salary" required step="0.01"
+             formControlName="salary">
+
       <div [hidden]="salary.pristine || salary.valid"
            class="alert alert-danger">
-        Salary is required.
+        Le salaire est obligatoire.
       </div>
     </div>
+
     <div class="mb-3">
-      <label for="gender">Gender:</label>
-      <input type="text" class="form-control" id="gender" formControlName="gender" placeholder="M, F or X">
+      <label for="gender">Genre :</label>
+      <input type="text" class="form-control"
+             id="gender" formControlName="gender"
+             placeholder="M, F ou X">
+
       <div [hidden]="gender.pristine || gender.valid"
            class="alert alert-danger">
-        Gender should be M, F or X.
+        Le genre doit être M, F ou X.
       </div>
     </div>
+
     <div class="mb-3">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" formControlName="email">
+      <label for="email">Adresse courriel :</label>
+      <input type="email" class="form-control"
+             id="email" formControlName="email">
+
       <div [hidden]="email.pristine || email.valid"
            class="alert alert-danger">
-        Wrong email format.
+        Le format de l’adresse courriel est invalide.
       </div>
     </div>
-    <button type="submit" class="btn btn-success" [disabled]="employeeForm.invalid">Submit</button>
+
+    <button type="submit"
+            class="btn btn-success"
+            [disabled]="employeeForm.invalid">
+      Enregistrer l’employé
+    </button>
+
   </form>
 </div>
