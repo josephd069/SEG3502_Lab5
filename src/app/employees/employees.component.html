@@ -21,5 +21,9 @@
       <td>{{emp.email}}</td>
     </tr>
     </tbody>
+    <div *ngIf="(employees.$ | async)?.length === 0"
+      class="alert alert-info mt-3">
+      Aucun employé trouvé. Ajoutez un employé pour commencer.
+    </div>
   </table>
 </div>
